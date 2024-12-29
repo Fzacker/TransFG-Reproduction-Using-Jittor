@@ -7,7 +7,7 @@ export device_mem_limit=40000000000
 export OMPI_ALLOW_RUN_AS_ROOT_CONFIRM=1
 export OMPI_ALLOW_RUN_AS_ROOT=1
 
-CUDA_VISIBLE_DEVICES=0,1,2,3 mpirun -np 2 python train.py \
+CUDA_VISIBLE_DEVICES=0,1 mpirun -np 2 python train.py \
     --dataset CUB_200_2011 \
     --split overlap \
     --num_steps 10000 \
